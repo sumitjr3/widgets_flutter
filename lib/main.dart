@@ -1,6 +1,4 @@
 /*
-1. Flutter is a popular framework for building cross-platform mobile applications, and it provides a wide range of widgets to create rich and dynamic user interfaces. Here's a list of some fundamental widgets you should consider learning as you get started with Flutter:
-
 2. Container: A basic widget for layout and styling.
 
 3. Text: To display text.
@@ -79,6 +77,8 @@
  */
 
 import 'package:flutter/material.dart';
+import 'package:widgets_flutter/constants/routes.dart';
+import 'package:widgets_flutter/views/Container.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -89,6 +89,9 @@ void main() async {
       primarySwatch: Colors.cyan,
     ),
     home: const HomePage(),
+    routes: {
+      ContainerRoute: (context) => const ContainerView(),
+    },
   ));
 }
 
@@ -143,7 +146,19 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: const Text('Home Page'),
       ),
-      body: ListView.builder(itemBuilder: itemBuilder),
+      body: ListView.builder(
+        itemCount: item.length,
+        itemBuilder: (BuildContext context, int index) {
+          return ListTile(
+            title: Text(item[index]),
+            onTap: () {
+              if (item[index] == 'Container') {
+                Navigator.pushNamed(context, ContainerRoute);
+              }
+            },
+          );
+        },
+      ),
     );
   }
 }
