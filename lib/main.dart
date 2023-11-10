@@ -79,6 +79,7 @@
 import 'package:flutter/material.dart';
 import 'package:widgets_flutter/constants/routes.dart';
 import 'package:widgets_flutter/views/Container.dart';
+import 'package:widgets_flutter/views/Text.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -91,6 +92,7 @@ void main() async {
     home: const HomePage(),
     routes: {
       ContainerRoute: (context) => const ContainerView(),
+      TextRoute: (context) => const TextView(),
     },
   ));
 }
@@ -154,6 +156,9 @@ class _HomePageState extends State<HomePage> {
             onTap: () {
               if (item[index] == 'Container') {
                 Navigator.pushNamed(context, ContainerRoute);
+              }
+              if (item[index] == 'Text') {
+                Navigator.pushNamed(context, TextRoute);
               }
             },
           );

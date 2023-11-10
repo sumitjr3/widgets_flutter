@@ -14,17 +14,20 @@ class _ContainerViewState extends State<ContainerView> {
       appBar: AppBar(
         title: const Text('Container Widget'),
       ),
-      body: Container(
-        height: 200,
-        width: 240,
-        color: Colors.blue,
-        alignment: Alignment.center,
-        child: ElevatedButton(
-          onPressed: () {},
-          style: ElevatedButton.styleFrom(
-            primary: Colors.red,
+      body: Center(
+        child: Container(
+          height: 150,
+          width: 240,
+          color: Colors.blue,
+          alignment: Alignment.center,
+          child: ElevatedButton(
+            onPressed: () {},
+            style: ElevatedButton.styleFrom(
+              foregroundColor: Colors.red,
+              minimumSize: const Size(220, 130),
+            ),
+            child: const Text("centrally alligned"),
           ),
-          child: const Text("centrally alligned"),
         ),
       ),
     );
