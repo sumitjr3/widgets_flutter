@@ -79,6 +79,7 @@
 import 'package:flutter/material.dart';
 import 'package:widgets_flutter/constants/routes.dart';
 import 'package:widgets_flutter/views/Container.dart';
+import 'package:widgets_flutter/views/RowsAndColumn.dart';
 import 'package:widgets_flutter/views/Text.dart';
 
 void main() async {
@@ -93,6 +94,7 @@ void main() async {
     routes: {
       ContainerRoute: (context) => const ContainerView(),
       TextRoute: (context) => const TextView(),
+      RowsAndColumnRoute: (context) => const RowsAndColumn(),
     },
   ));
 }
@@ -158,7 +160,12 @@ class _HomePageState extends State<HomePage> {
                 Navigator.pushNamed(context, ContainerRoute);
               }
               if (item[index] == 'Text') {
-                Navigator.pushNamed(context, TextRoute);
+                Navigator.of(context)
+                    .pushNamedAndRemoveUntil(TextRoute, (route) => false);
+              }
+              if (item[index] == 'Row and Column') {
+                Navigator.of(context).pushNamedAndRemoveUntil(
+                    RowsAndColumnRoute, (route) => false);
               }
             },
           );
