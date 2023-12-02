@@ -16,7 +16,7 @@ class _RowsAndColumnState extends State<RowsAndColumn> {
       ),
       body: const Column(
         children: [
-          Row(
+          Column(
             children: [
               Text(
                 'first',
@@ -35,11 +35,11 @@ class _RowsAndColumnState extends State<RowsAndColumn> {
           Row(
             children: [
               Text(
-                'fourth',
+                'fourth ',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0),
               ),
               Text(
-                'fifth',
+                'fifth ',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0),
               ),
               Text(

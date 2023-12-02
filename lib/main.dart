@@ -79,8 +79,12 @@
 import 'package:flutter/material.dart';
 import 'package:widgets_flutter/constants/routes.dart';
 import 'package:widgets_flutter/views/Container.dart';
+import 'package:widgets_flutter/views/ListView/listviewBuilder.dart';
+import 'package:widgets_flutter/views/ListView/listviewSeperator.dart';
+import 'package:widgets_flutter/views/ListView/staticList.dart';
 import 'package:widgets_flutter/views/RowsAndColumn.dart';
 import 'package:widgets_flutter/views/Text.dart';
+import 'package:widgets_flutter/views/listView.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -95,6 +99,10 @@ void main() async {
       ContainerRoute: (context) => const ContainerView(),
       TextRoute: (context) => const TextView(),
       RowsAndColumnRoute: (context) => const RowsAndColumn(),
+      listViewRoute: (context) => const ListViewActivity(),
+      staticListRoute: (context) => const staticList(),
+      listviewBuilderRoute: (context) => const ListViewBuilder(),
+      listviewSeperatorRoute: (context) => const ListViewSeperator(),
     },
   ));
 }
@@ -160,12 +168,13 @@ class _HomePageState extends State<HomePage> {
                 Navigator.pushNamed(context, ContainerRoute);
               }
               if (item[index] == 'Text') {
-                Navigator.of(context)
-                    .pushNamedAndRemoveUntil(TextRoute, (route) => false);
+                Navigator.of(context).pushNamed(TextRoute);
               }
               if (item[index] == 'Row and Column') {
-                Navigator.of(context).pushNamedAndRemoveUntil(
-                    RowsAndColumnRoute, (route) => false);
+                Navigator.of(context).pushNamed(RowsAndColumnRoute);
+              }
+              if (item[index] == 'ListView') {
+                Navigator.of(context).pushNamed(listViewRoute);
               }
             },
           );
