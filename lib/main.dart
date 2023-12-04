@@ -84,6 +84,9 @@ import 'package:widgets_flutter/views/ListView/listviewSeperator.dart';
 import 'package:widgets_flutter/views/ListView/staticList.dart';
 import 'package:widgets_flutter/views/RowsAndColumn.dart';
 import 'package:widgets_flutter/views/Text.dart';
+import 'package:widgets_flutter/views/cardview/cardView.dart';
+import 'package:widgets_flutter/views/cardview/cardinlist.dart';
+import 'package:widgets_flutter/views/cardview/simplecard.dart';
 import 'package:widgets_flutter/views/listView.dart';
 
 void main() async {
@@ -103,6 +106,9 @@ void main() async {
       staticListRoute: (context) => const staticList(),
       listviewBuilderRoute: (context) => const ListViewBuilder(),
       listviewSeperatorRoute: (context) => const ListViewSeperator(),
+      cardViewRoute: (context) => const cardView(),
+      simpleCardRoute: (context) => const simpleCard(),
+      cardInListRoute: (context) => const cardInList(),
     },
   ));
 }
@@ -175,6 +181,9 @@ class _HomePageState extends State<HomePage> {
               }
               if (item[index] == 'ListView') {
                 Navigator.of(context).pushNamed(listViewRoute);
+              }
+              if (item[index] == 'Card') {
+                Navigator.of(context).pushNamed(cardViewRoute);
               }
             },
           );
