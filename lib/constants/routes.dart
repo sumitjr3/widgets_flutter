@@ -1,4 +1,5 @@
 import 'package:widgets_flutter/views/ListView/staticList.dart';
+import 'package:widgets_flutter/views/buttonView.dart';
 import 'package:widgets_flutter/views/cardview/simplecard.dart';
 
 const ContainerRoute = '/container/';
@@ -11,3 +12,5 @@ const listviewSeperatorRoute = '/seperator listview/';
 const cardViewRoute = '/cardview/';
 const simpleCardRoute = '/simple card/';
 const cardInListRoute = '/list card/';
+const imageViewRoute = '/image view/';
+const buttonViewRoute = '/button view/';
