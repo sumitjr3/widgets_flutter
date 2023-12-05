@@ -84,12 +84,14 @@ import 'package:widgets_flutter/views/ListView/listviewSeperator.dart';
 import 'package:widgets_flutter/views/ListView/staticList.dart';
 import 'package:widgets_flutter/views/RowsAndColumn.dart';
 import 'package:widgets_flutter/views/Text.dart';
+import 'package:widgets_flutter/views/appbarView.dart';
 import 'package:widgets_flutter/views/buttonView.dart';
 import 'package:widgets_flutter/views/cardview/cardView.dart';
 import 'package:widgets_flutter/views/cardview/cardinlist.dart';
 import 'package:widgets_flutter/views/cardview/simplecard.dart';
 import 'package:widgets_flutter/views/imageView.dart';
 import 'package:widgets_flutter/views/listView.dart';
+import 'package:widgets_flutter/views/textfield.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -113,6 +115,8 @@ void main() async {
       cardInListRoute: (context) => const cardInList(),
       imageViewRoute: (context) => const imageView(),
       buttonViewRoute: (context) => const buttonView(),
+      textfieldViewRoute: (context) => const textfieldView(),
+      appbarViewRoute: (context) => const appbarView(),
     },
   ));
 }
@@ -194,6 +198,12 @@ class _HomePageState extends State<HomePage> {
               }
               if (item[index] == 'Button Widgets') {
                 Navigator.of(context).pushNamed(buttonViewRoute);
+              }
+              if (item[index] == 'TextField') {
+                Navigator.of(context).pushNamed(textfieldViewRoute);
+              }
+              if (item[index] == 'AppBar') {
+                Navigator.of(context).pushNamed(textfieldViewRoute);
               }
             },
           );

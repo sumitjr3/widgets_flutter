@@ -1,6 +1,8 @@
 import 'package:widgets_flutter/views/ListView/staticList.dart';
+import 'package:widgets_flutter/views/appbarView.dart';
 import 'package:widgets_flutter/views/buttonView.dart';
 import 'package:widgets_flutter/views/cardview/simplecard.dart';
+import 'package:widgets_flutter/views/textfield.dart';
 
 const ContainerRoute = '/container/';
 const TextRoute = '/text/';
@@ -14,3 +16,5 @@ const simpleCardRoute = '/simple card/';
 const cardInListRoute = '/list card/';
 const imageViewRoute = '/image view/';
 const buttonViewRoute = '/button view/';
+const textfieldViewRoute = '/textfield/';
+const appbarViewRoute = '/appbar/';
