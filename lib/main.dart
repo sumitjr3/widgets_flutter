@@ -103,6 +103,7 @@ void main() async {
     ),
     home: const HomePage(),
     routes: {
+      mainActivityRoute: (context) => const HomePage(),
       ContainerRoute: (context) => const ContainerView(),
       TextRoute: (context) => const TextView(),
       RowsAndColumnRoute: (context) => const RowsAndColumn(),
@@ -202,8 +203,8 @@ class _HomePageState extends State<HomePage> {
               if (item[index] == 'TextField') {
                 Navigator.of(context).pushNamed(textfieldViewRoute);
               }
-              if (item[index] == 'AppBar') {
-                Navigator.of(context).pushNamed(textfieldViewRoute);
+              if (item[index] == 'AppBar' || item[index] == 'Drawer') {
+                Navigator.of(context).pushNamed(appbarViewRoute);
               }
             },
           );

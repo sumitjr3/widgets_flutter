@@ -4,6 +4,7 @@ import 'package:widgets_flutter/views/buttonView.dart';
 import 'package:widgets_flutter/views/cardview/simplecard.dart';
 import 'package:widgets_flutter/views/textfield.dart';
 
+const mainActivityRoute = '/main/';
 const ContainerRoute = '/container/';
 const TextRoute = '/text/';
 const RowsAndColumnRoute = '/rows/';
