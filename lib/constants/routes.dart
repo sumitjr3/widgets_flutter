@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:widgets_flutter/views/ListView/staticList.dart';
 import 'package:widgets_flutter/views/appbarView.dart';
 import 'package:widgets_flutter/views/buttonView.dart';
@@ -19,3 +20,4 @@ const imageViewRoute = '/image view/';
 const buttonViewRoute = '/button view/';
 const textfieldViewRoute = '/textfield/';
 const appbarViewRoute = '/appbar/';
+const BottomNavigationBarRoute = '/bottom navigation/';

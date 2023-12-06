@@ -85,6 +85,7 @@ import 'package:widgets_flutter/views/ListView/staticList.dart';
 import 'package:widgets_flutter/views/RowsAndColumn.dart';
 import 'package:widgets_flutter/views/Text.dart';
 import 'package:widgets_flutter/views/appbarView.dart';
+import 'package:widgets_flutter/views/bottomNavigationView.dart';
 import 'package:widgets_flutter/views/buttonView.dart';
 import 'package:widgets_flutter/views/cardview/cardView.dart';
 import 'package:widgets_flutter/views/cardview/cardinlist.dart';
@@ -118,6 +119,7 @@ void main() async {
       buttonViewRoute: (context) => const buttonView(),
       textfieldViewRoute: (context) => const textfieldView(),
       appbarViewRoute: (context) => const appbarView(),
+      BottomNavigationBarRoute: (context) => const BottomNavigationView(),
     },
   ));
 }
@@ -205,6 +207,9 @@ class _HomePageState extends State<HomePage> {
               }
               if (item[index] == 'AppBar' || item[index] == 'Drawer') {
                 Navigator.of(context).pushNamed(appbarViewRoute);
+              }
+              if (item[index] == 'Bottom Navigation Bar') {
+                Navigator.of(context).pushNamed(BottomNavigationBarRoute);
               }
             },
           );
