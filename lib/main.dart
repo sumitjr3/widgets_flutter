@@ -92,6 +92,7 @@ import 'package:widgets_flutter/views/cardview/cardinlist.dart';
 import 'package:widgets_flutter/views/cardview/simplecard.dart';
 import 'package:widgets_flutter/views/imageView.dart';
 import 'package:widgets_flutter/views/listView.dart';
+import 'package:widgets_flutter/views/popupMenuView.dart';
 import 'package:widgets_flutter/views/textfield.dart';
 
 void main() async {
@@ -120,6 +121,7 @@ void main() async {
       textfieldViewRoute: (context) => const textfieldView(),
       appbarViewRoute: (context) => const appbarView(),
       BottomNavigationBarRoute: (context) => const BottomNavigationView(),
+      popupMenuViewRoute: (context) => const popupMenuView(),
     },
   ));
 }
@@ -210,6 +212,9 @@ class _HomePageState extends State<HomePage> {
               }
               if (item[index] == 'Bottom Navigation Bar') {
                 Navigator.of(context).pushNamed(BottomNavigationBarRoute);
+              }
+              if (item[index] == 'PopUp Menu Button') {
+                Navigator.of(context).pushNamed(popupMenuViewRoute);
               }
             },
           );

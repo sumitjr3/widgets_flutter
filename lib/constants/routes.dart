@@ -3,6 +3,7 @@ import 'package:widgets_flutter/views/ListView/staticList.dart';
 import 'package:widgets_flutter/views/appbarView.dart';
 import 'package:widgets_flutter/views/buttonView.dart';
 import 'package:widgets_flutter/views/cardview/simplecard.dart';
+import 'package:widgets_flutter/views/popupMenuView.dart';
 import 'package:widgets_flutter/views/textfield.dart';
 
 const mainActivityRoute = '/main/';
@@ -21,3 +22,4 @@ const buttonViewRoute = '/button view/';
 const textfieldViewRoute = '/textfield/';
 const appbarViewRoute = '/appbar/';
 const BottomNavigationBarRoute = '/bottom navigation/';
+const popupMenuViewRoute = '/popup menu/';
