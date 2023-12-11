@@ -4,6 +4,7 @@ import 'package:widgets_flutter/views/appbarView.dart';
 import 'package:widgets_flutter/views/buttonView.dart';
 import 'package:widgets_flutter/views/cardview/simplecard.dart';
 import 'package:widgets_flutter/views/popupMenuView.dart';
+import 'package:widgets_flutter/views/TabBar/tabBarView.dart';
 import 'package:widgets_flutter/views/textfield.dart';
 
 const mainActivityRoute = '/main/';
@@ -23,3 +24,5 @@ const textfieldViewRoute = '/textfield/';
 const appbarViewRoute = '/appbar/';
 const BottomNavigationBarRoute = '/bottom navigation/';
 const popupMenuViewRoute = '/popup menu/';
+const tabBarViewRoute = '/tab bar/';
+const dialogRoute = '/dialog/';

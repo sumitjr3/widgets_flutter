@@ -90,9 +90,11 @@ import 'package:widgets_flutter/views/buttonView.dart';
 import 'package:widgets_flutter/views/cardview/cardView.dart';
 import 'package:widgets_flutter/views/cardview/cardinlist.dart';
 import 'package:widgets_flutter/views/cardview/simplecard.dart';
+import 'package:widgets_flutter/views/dialog.dart';
 import 'package:widgets_flutter/views/imageView.dart';
 import 'package:widgets_flutter/views/listView.dart';
 import 'package:widgets_flutter/views/popupMenuView.dart';
+import 'package:widgets_flutter/views/TabBar/tabBarView.dart';
 import 'package:widgets_flutter/views/textfield.dart';
 
 void main() async {
@@ -122,6 +124,8 @@ void main() async {
       appbarViewRoute: (context) => const appbarView(),
       BottomNavigationBarRoute: (context) => const BottomNavigationView(),
       popupMenuViewRoute: (context) => const popupMenuView(),
+      tabBarViewRoute: (context) => const tabBarView(),
+      dialogRoute: (context) => const dialogView(),
     },
   ));
 }
@@ -215,6 +219,12 @@ class _HomePageState extends State<HomePage> {
               }
               if (item[index] == 'PopUp Menu Button') {
                 Navigator.of(context).pushNamed(popupMenuViewRoute);
+              }
+              if (item[index] == 'TabBar and TabBar View') {
+                Navigator.of(context).pushNamed(tabBarViewRoute);
+              }
+              if (item[index] == 'AlertDialog and SimpleDialog') {
+                Navigator.of(context).pushNamed(dialogRoute);
               }
             },
           );
