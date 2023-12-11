@@ -54,19 +54,21 @@ class _dialogViewState extends State<dialogView> {
               ),
               TextButton(
                 onPressed: () {
-                  SimpleDialog(
-                    title: const Text('simple dialog'),
-                    contentPadding: const EdgeInsets.all(20),
-                    children: [
-                      const Text('more info'),
-                      TextButton(
-                        onPressed: () {
-                          Navigator.pop(context);
-                        },
-                        child: const Text('close'),
-                      ),
-                    ],
-                  );
+                  showDialog(
+                      context: context,
+                      builder: (context) => SimpleDialog(
+                            title: const Text('simple dialog'),
+                            contentPadding: const EdgeInsets.all(20),
+                            children: [
+                              const Text('more info'),
+                              TextButton(
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                                child: const Text('close'),
+                              ),
+                            ],
+                          ));
                 },
                 child: const Text(
                   'Simple dialog',
