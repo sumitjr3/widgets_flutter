@@ -3,8 +3,11 @@ import 'package:widgets_flutter/views/ListView/staticList.dart';
 import 'package:widgets_flutter/views/appbarView.dart';
 import 'package:widgets_flutter/views/buttonView.dart';
 import 'package:widgets_flutter/views/cardview/simplecard.dart';
+import 'package:widgets_flutter/views/gestureDetector.dart';
+import 'package:widgets_flutter/views/gridView.dart';
 import 'package:widgets_flutter/views/popupMenuView.dart';
 import 'package:widgets_flutter/views/TabBar/tabBarView.dart';
+import 'package:widgets_flutter/views/richText.dart';
 import 'package:widgets_flutter/views/textfield.dart';
 
 const mainActivityRoute = '/main/';
@@ -26,3 +29,6 @@ const BottomNavigationBarRoute = '/bottom navigation/';
 const popupMenuViewRoute = '/popup menu/';
 const tabBarViewRoute = '/tab bar/';
 const dialogRoute = '/dialog/';
+const gestureDetectorViewRoute = '/gesture detector/';
+const gridViewRoute = '/grid/';
+const richTextViewRoute = '/rich text/';

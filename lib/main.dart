@@ -91,10 +91,13 @@ import 'package:widgets_flutter/views/cardview/cardView.dart';
 import 'package:widgets_flutter/views/cardview/cardinlist.dart';
 import 'package:widgets_flutter/views/cardview/simplecard.dart';
 import 'package:widgets_flutter/views/dialog.dart';
+import 'package:widgets_flutter/views/gestureDetector.dart';
+import 'package:widgets_flutter/views/gridView.dart';
 import 'package:widgets_flutter/views/imageView.dart';
 import 'package:widgets_flutter/views/listView.dart';
 import 'package:widgets_flutter/views/popupMenuView.dart';
 import 'package:widgets_flutter/views/TabBar/tabBarView.dart';
+import 'package:widgets_flutter/views/richText.dart';
 import 'package:widgets_flutter/views/textfield.dart';
 
 void main() async {
@@ -126,6 +129,9 @@ void main() async {
       popupMenuViewRoute: (context) => const popupMenuView(),
       tabBarViewRoute: (context) => const tabBarView(),
       dialogRoute: (context) => const dialogView(),
+      gestureDetectorViewRoute: (context) => const gestureDetectorView(),
+      gridViewRoute: (context) => const gridView(),
+      richTextViewRoute: (context) => const rich_text_view(),
     },
   ));
 }
@@ -225,6 +231,15 @@ class _HomePageState extends State<HomePage> {
               }
               if (item[index] == 'AlertDialog and SimpleDialog') {
                 Navigator.of(context).pushNamed(dialogRoute);
+              }
+              if (item[index] == 'GestureDetector') {
+                Navigator.of(context).pushNamed(gestureDetectorViewRoute);
+              }
+              if (item[index] == 'GridView') {
+                Navigator.of(context).pushNamed(gridViewRoute);
+              }
+              if (item[index] == 'RichText') {
+                Navigator.of(context).pushNamed(richTextViewRoute);
               }
             },
           );
