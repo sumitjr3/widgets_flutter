@@ -9,6 +9,7 @@ import 'package:widgets_flutter/views/popupMenuView.dart';
 import 'package:widgets_flutter/views/TabBar/tabBarView.dart';
 import 'package:widgets_flutter/views/richText.dart';
 import 'package:widgets_flutter/views/textfield.dart';
+import 'package:widgets_flutter/views/wrapWidget.dart';
 
 const mainActivityRoute = '/main/';
 const ContainerRoute = '/container/';
@@ -32,3 +33,4 @@ const dialogRoute = '/dialog/';
 const gestureDetectorViewRoute = '/gesture detector/';
 const gridViewRoute = '/grid/';
 const richTextViewRoute = '/rich text/';
+const wrapWidgetViewRoute = '/wrap widget/';

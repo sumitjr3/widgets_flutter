@@ -99,6 +99,7 @@ import 'package:widgets_flutter/views/popupMenuView.dart';
 import 'package:widgets_flutter/views/TabBar/tabBarView.dart';
 import 'package:widgets_flutter/views/richText.dart';
 import 'package:widgets_flutter/views/textfield.dart';
+import 'package:widgets_flutter/views/wrapWidget.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -132,6 +133,7 @@ void main() async {
       gestureDetectorViewRoute: (context) => const gestureDetectorView(),
       gridViewRoute: (context) => const gridView(),
       richTextViewRoute: (context) => const rich_text_view(),
+      wrapWidgetViewRoute: (context) => const wrapWidgetView(),
     },
   ));
 }
@@ -177,7 +179,6 @@ class _HomePageState extends State<HomePage> {
     'Page View',
     'ClipPath',
     'ClipRect',
-    'CustomPaint',
     'RichText',
     'SliverAppBar and SliverList'
   ];
@@ -240,6 +241,9 @@ class _HomePageState extends State<HomePage> {
               }
               if (item[index] == 'RichText') {
                 Navigator.of(context).pushNamed(richTextViewRoute);
+              }
+              if (item[index] == 'Wrap') {
+                Navigator.of(context).pushNamed(wrapWidgetViewRoute);
               }
             },
           );
