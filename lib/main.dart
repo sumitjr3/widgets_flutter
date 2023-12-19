@@ -94,6 +94,7 @@ import 'package:widgets_flutter/views/dialog.dart';
 import 'package:widgets_flutter/views/gestureDetector.dart';
 import 'package:widgets_flutter/views/gridView.dart';
 import 'package:widgets_flutter/views/imageView.dart';
+import 'package:widgets_flutter/views/inkwellWidget.dart';
 import 'package:widgets_flutter/views/listView.dart';
 import 'package:widgets_flutter/views/popupMenuView.dart';
 import 'package:widgets_flutter/views/TabBar/tabBarView.dart';
@@ -134,6 +135,7 @@ void main() async {
       gridViewRoute: (context) => const gridView(),
       richTextViewRoute: (context) => const rich_text_view(),
       wrapWidgetViewRoute: (context) => const wrapWidgetView(),
+      inkWellWidgetRoute: (context) => const inkWellWidget(),
     },
   ));
 }
@@ -244,6 +246,9 @@ class _HomePageState extends State<HomePage> {
               }
               if (item[index] == 'Wrap') {
                 Navigator.of(context).pushNamed(wrapWidgetViewRoute);
+              }
+              if (item[index] == 'Inkwell') {
+                Navigator.of(context).pushNamed(inkWellWidgetRoute);
               }
             },
           );
