@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 /** inkwell widget is used to make any widget clickable, we just need to wrap it with widget inkwell */
 
 class inkWellWidget extends StatefulWidget {
@@ -19,13 +18,13 @@ class _inkWellWidgetState extends State<inkWellWidget> {
       body: Center(
         child: InkWell(
           onTap: () {
-            showToastMessage("single tap");
+            _showToast("single tap");
           },
           onDoubleTap: () {
-            showToastMessage("double tap");
+            _showToast("double tap");
           },
           onLongPress: () {
-            showToastMessage("long pressed");
+            _showToast("long pressed");
           },
           child: Container(
             width: 200,
@@ -37,10 +36,13 @@ class _inkWellWidgetState extends State<inkWellWidget> {
     );
   }
 
-  void showToastMessage(String message) => Fluttertoast.showToast(
-        msg: message,
-        backgroundColor: Colors.red,
-        textColor: Colors.black,
-        gravity: ToastGravity.BOTTOM,
-      );
+  void _showToast(String textOutput) {
+    final scaffold = ScaffoldMessenger.of(context);
+    scaffold.showSnackBar(
+      SnackBar(
+        content: Text(textOutput),
+        duration: const Duration(seconds: 2),
+      ),
+    );
+  }
 }
