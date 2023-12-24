@@ -84,6 +84,7 @@ import 'package:widgets_flutter/views/ListView/listviewSeperator.dart';
 import 'package:widgets_flutter/views/ListView/staticList.dart';
 import 'package:widgets_flutter/views/RowsAndColumn.dart';
 import 'package:widgets_flutter/views/Text.dart';
+import 'package:widgets_flutter/views/animated_container.dart';
 import 'package:widgets_flutter/views/appbarView.dart';
 import 'package:widgets_flutter/views/bottomNavigationView.dart';
 import 'package:widgets_flutter/views/buttonView.dart';
@@ -93,6 +94,8 @@ import 'package:widgets_flutter/views/cardview/simplecard.dart';
 import 'package:widgets_flutter/views/dialog.dart';
 import 'package:widgets_flutter/views/gestureDetector.dart';
 import 'package:widgets_flutter/views/gridView.dart';
+import 'package:widgets_flutter/views/hero_animation.dart';
+import 'package:widgets_flutter/views/hero_detailed.dart';
 import 'package:widgets_flutter/views/imageView.dart';
 import 'package:widgets_flutter/views/inkwellWidget.dart';
 import 'package:widgets_flutter/views/listView.dart';
@@ -136,6 +139,9 @@ void main() async {
       richTextViewRoute: (context) => const rich_text_view(),
       wrapWidgetViewRoute: (context) => const wrapWidgetView(),
       inkWellWidgetRoute: (context) => const inkWellWidget(),
+      hero_animation_viewRoute: (context) => const hero_animation_view(),
+      hero_detailed_screenRoute: (context) => const hero_detailed_screen(),
+      animated_containerRoute: (context) => const animated_container(),
     },
   ));
 }
@@ -249,6 +255,12 @@ class _HomePageState extends State<HomePage> {
               }
               if (item[index] == 'Inkwell') {
                 Navigator.of(context).pushNamed(inkWellWidgetRoute);
+              }
+              if (item[index] == 'Hero') {
+                Navigator.of(context).pushNamed(hero_animation_viewRoute);
+              }
+              if (item[index] == 'Animated Container') {
+                Navigator.of(context).pushNamed(animated_containerRoute);
               }
             },
           );
