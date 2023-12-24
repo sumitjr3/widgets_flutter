@@ -27,11 +27,19 @@ class _animated_containerState extends State<animated_container> {
     });
   }
 
+  void _changeBoxSize() {
+    setState(() {
+      boxHeight = 200;
+      boxWidth = 200;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: _movebox,
       onDoubleTap: _changeBoxColor,
+      onLongPress: _changeBoxSize,
       child: Scaffold(
         backgroundColor: Colors.amber[300],
         body: Center(
