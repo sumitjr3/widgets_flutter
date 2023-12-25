@@ -179,7 +179,6 @@ class _HomePageState extends State<HomePage> {
     'Wrap',
     'Inkwell',
     'Spacer',
-    'Flutterlogo',
     'InkBar',
     'Notification Listener',
     'Animated Container',
