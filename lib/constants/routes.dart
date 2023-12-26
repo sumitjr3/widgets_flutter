@@ -12,6 +12,7 @@ import 'package:widgets_flutter/views/inkwellWidget.dart';
 import 'package:widgets_flutter/views/popupMenuView.dart';
 import 'package:widgets_flutter/views/TabBar/tabBarView.dart';
 import 'package:widgets_flutter/views/richText.dart';
+import 'package:widgets_flutter/views/sliver_appbar.dart';
 import 'package:widgets_flutter/views/textfield.dart';
 import 'package:widgets_flutter/views/wrapWidget.dart';
 
@@ -42,3 +43,4 @@ const inkWellWidgetRoute = '/ink well/';
 const hero_animation_viewRoute = '/hero animation/';
 const hero_detailed_screenRoute = '/detailed hero/';
 const animated_containerRoute = '/animated container/';
+const sliver_appbarRoute = '/sliver appbar/';

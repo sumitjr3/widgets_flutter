@@ -102,6 +102,7 @@ import 'package:widgets_flutter/views/listView.dart';
 import 'package:widgets_flutter/views/popupMenuView.dart';
 import 'package:widgets_flutter/views/TabBar/tabBarView.dart';
 import 'package:widgets_flutter/views/richText.dart';
+import 'package:widgets_flutter/views/sliver_appbar.dart';
 import 'package:widgets_flutter/views/textfield.dart';
 import 'package:widgets_flutter/views/wrapWidget.dart';
 
@@ -142,6 +143,7 @@ void main() async {
       hero_animation_viewRoute: (context) => const hero_animation_view(),
       hero_detailed_screenRoute: (context) => const hero_detailed_screen(),
       animated_containerRoute: (context) => const animated_container(),
+      sliver_appbarRoute: (context) => const sliver_appbar(),
     },
   ));
 }
@@ -184,8 +186,6 @@ class _HomePageState extends State<HomePage> {
     'Animated Container',
     'FutureBuilder and StreamBuilder',
     'Page View',
-    'ClipPath',
-    'ClipRect',
     'RichText',
     'SliverAppBar and SliverList'
   ];
@@ -260,6 +260,9 @@ class _HomePageState extends State<HomePage> {
               }
               if (item[index] == 'Animated Container') {
                 Navigator.of(context).pushNamed(animated_containerRoute);
+              }
+              if (item[index] == 'SliverAppBar and SliverList') {
+                Navigator.of(context).pushNamed(sliver_appbarRoute);
               }
             },
           );
