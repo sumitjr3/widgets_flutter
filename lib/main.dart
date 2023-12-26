@@ -99,6 +99,7 @@ import 'package:widgets_flutter/views/hero_detailed.dart';
 import 'package:widgets_flutter/views/imageView.dart';
 import 'package:widgets_flutter/views/inkwellWidget.dart';
 import 'package:widgets_flutter/views/listView.dart';
+import 'package:widgets_flutter/views/page_view.dart';
 import 'package:widgets_flutter/views/popupMenuView.dart';
 import 'package:widgets_flutter/views/TabBar/tabBarView.dart';
 import 'package:widgets_flutter/views/richText.dart';
@@ -144,6 +145,7 @@ void main() async {
       hero_detailed_screenRoute: (context) => const hero_detailed_screen(),
       animated_containerRoute: (context) => const animated_container(),
       sliver_appbarRoute: (context) => const sliver_appbar(),
+      page_viewRoute: (context) => const page_view(),
     },
   ));
 }
@@ -263,6 +265,9 @@ class _HomePageState extends State<HomePage> {
               }
               if (item[index] == 'SliverAppBar and SliverList') {
                 Navigator.of(context).pushNamed(sliver_appbarRoute);
+              }
+              if (item[index] == 'Page View') {
+                Navigator.of(context).pushNamed(page_viewRoute);
               }
             },
           );
