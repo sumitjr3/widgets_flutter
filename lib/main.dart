@@ -92,6 +92,8 @@ import 'package:widgets_flutter/views/cardview/cardView.dart';
 import 'package:widgets_flutter/views/cardview/cardinlist.dart';
 import 'package:widgets_flutter/views/cardview/simplecard.dart';
 import 'package:widgets_flutter/views/dialog.dart';
+import 'package:widgets_flutter/views/formfields/fields_drop_down.dart';
+import 'package:widgets_flutter/views/formfields/form_fields.dart';
 import 'package:widgets_flutter/views/gestureDetector.dart';
 import 'package:widgets_flutter/views/gridView.dart';
 import 'package:widgets_flutter/views/hero_animation.dart';
@@ -146,6 +148,7 @@ void main() async {
       animated_containerRoute: (context) => const animated_container(),
       sliver_appbarRoute: (context) => const sliver_appbar(),
       page_viewRoute: (context) => const page_view(),
+      formFieldRoute: (context) => const DropDownFields(),
     },
   ));
 }
@@ -189,7 +192,8 @@ class _HomePageState extends State<HomePage> {
     'FutureBuilder and StreamBuilder',
     'Page View',
     'RichText',
-    'SliverAppBar and SliverList'
+    'SliverAppBar and SliverList',
+    'form fields'
   ];
   @override
   Widget build(BuildContext context) {
@@ -268,6 +272,9 @@ class _HomePageState extends State<HomePage> {
               }
               if (item[index] == 'Page View') {
                 Navigator.of(context).pushNamed(page_viewRoute);
+              }
+              if (item[index] == 'form fields') {
+                Navigator.of(context).pushNamed(formFieldRoute);
               }
             },
           );
